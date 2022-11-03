@@ -4,6 +4,7 @@ import co.sq72.fwk.web.helper.Helper;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
 public class WebTest {
@@ -28,5 +29,11 @@ public class WebTest {
             System.setProperty("webdriver.chrome.driver", "src/test/resources/driver/linux/chromedriver");
         }
 
+    }
+
+
+    @AfterMethod
+    public void endAndDestroy(){
+        this.driver.quit();
     }
 }
