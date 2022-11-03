@@ -10,7 +10,6 @@ import org.testng.annotations.BeforeMethod;
 public class WebTest {
     public WebDriver driver;
 
-
     @BeforeMethod
     public void prepBrowser(){
         setChromeDriverProperty();

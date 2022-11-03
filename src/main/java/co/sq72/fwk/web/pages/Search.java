@@ -12,4 +12,10 @@ public class Search extends Helper {
         driver.findElement(searchField).sendKeys(product);
         return this;
     }
+
+    public Search selectFromResults(){
+        //NB Change this to dynamically select specific item "Men’s SpaceX Polo" by description
+        driver.findElement(By.cssSelector(".Grid__Cell:nth-child(1) .ProductItem__Info a")).click();
+        return this;
+    }
 }
